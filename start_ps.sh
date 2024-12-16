@@ -3,6 +3,7 @@ docker run -dit --rm --network ps-llama-network \
   --name param-server \
   --hostname param-server \
   -v "$(pwd)":/workspace \
+  -p 1234:1234 \
   -w /workspace \
   -e NCCL_DEBUG=INFO \
   -e NCCL_IB_DISABLE=1 \

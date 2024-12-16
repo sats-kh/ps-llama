@@ -4,6 +4,7 @@ for i in {0..1}; do
     --hostname worker-3-gpu-$i \
     --gpus '"device='$i'"' \
     -v "$(pwd)":/workspace \
+    -p 1234:1234 \
     -w /workspace \
     -e NCCL_DEBUG=INFO \
     -e NCCL_IB_DISABLE=1 \

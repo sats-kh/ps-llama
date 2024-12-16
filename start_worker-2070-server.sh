@@ -1,8 +1,9 @@
 for i in {0..1}; do
   docker run -dit --rm --network ps-llama-network \
-    --name worker-3-gpu-$i \
-    --hostname worker-3-gpu-$i \
+    --name worker-4-gpu-$i \
+    --hostname worker-4-gpu-$i \
     --gpus '"device='$i'"' \
+    -p 1234:1234 \
     -v "$(pwd)":/workspace \
     -w /workspace \
     -e NCCL_DEBUG=INFO \

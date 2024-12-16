@@ -12,7 +12,7 @@ try:
     dist.init_process_group(
         backend="nccl",
         init_method="tcp://param-server:1234",  # 파라미터 서버 주소
-        world_size=13,
+        world_size=17,
         rank=int(os.getenv("RANK"))
     )
     print(f"Worker {os.getenv('RANK')} initialized!")

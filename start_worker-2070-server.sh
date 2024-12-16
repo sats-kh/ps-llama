@@ -3,7 +3,6 @@ for i in {0..1}; do
     --name worker-4-gpu-$i \
     --hostname worker-4-gpu-$i \
     --gpus '"device='$i'"' \
-    -p 1234:1234 \
     -v "$(pwd)":/workspace \
     -w /workspace \
     -e NCCL_DEBUG=INFO \

@@ -6,7 +6,7 @@ try:
     # 초기화 시작 메시지
     print("Initializing Parameter Server...")
     dist.init_process_group(
-        backend="nccl", init_method="tcp://param-server:1234", world_size=17, rank=0,
+        backend="nccl", init_method="tcp://147.47.122.200:1234", world_size=17, rank=0,
     )
 
     # 모델 정의

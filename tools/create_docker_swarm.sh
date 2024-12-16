@@ -15,5 +15,6 @@ docker swarm init --advertise-addr "$1"
 
 docker network create \
   --driver overlay \
+  --attachable \
   ps-llama-network
 #  "$2"
